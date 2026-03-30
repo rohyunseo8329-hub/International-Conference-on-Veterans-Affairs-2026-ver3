@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 국제보훈컨퍼런스 | Alliance of Memory, Bridge to Future</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Noto+Serif+KR:wght@300;400;600;700&family=Barlow+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crimson: #C0162C;
+    --crimson-dark: #8B0E1E;
+    --crimson-light: #E8334A;
+    --midnight: #0D1B3E;
+    --midnight-mid: #162456;
+    --midnight-light: #1E3070;
+    --gold: #D4AF6A;
+    --cream: #F5F0E8;
+    --white: #FFFFFF;
+    --gray-light: #F0EDE8;
+    --text-dark: #1A1A2E;
+    --text-muted: #6B7280;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Serif KR', serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 60px;
+    background: rgba(13, 27, 62, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(212, 175, 106, 0.25);
+  }
+
+  .nav-logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: rgba(245, 240, 232, 0.75);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  .nav-cta {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    color: var(--midnight);
+    background: var(--gold);
+    padding: 9px 22px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 2px;
+    transition: background 0.3s, transform 0.2s;
+  }
+
+  .nav-cta:hover {
+    background: var(--white);
+    transform: translateY(-1px);
+  }
+
+  /* ── HERO ── */
+  #hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--midnight);
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 20% 50%, rgba(192, 22, 44, 0.18) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 80% at 80% 30%, rgba(22, 36, 86, 0.9) 0%, transparent 60%),
+      linear-gradient(160deg, #0D1B3E 0%, #162456 40%, #1E1035 80%, #0D1B3E 100%);
+  }
+
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(212,175,106,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(212,175,106,0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .hero-orb {
+    position: absolute;
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(192,22,44,0.15) 0%, transparent 70%);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse-orb 6s ease-in-out infinite;
+  }
+
+  @keyframes pulse-orb {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+    50% { transform: translate(-50%, -50%) scale(1.15); opacity: 1; }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 120px 40px 80px;
+    max-width: 900px;
+    animation: fade-up 1.2s ease forwards;
+  }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .hero-label::before, .hero-label::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.6;
+  }
+
+  .hero-year {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(100px, 16vw, 180px);
+    font-weight: 700;
+    line-height: 0.85;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(212, 175, 106, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -56%);
+    z-index: 0;
+    user-select: none;
+    letter-spacing: -4px;
+  }
+
+  .hero-title-kr {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4.5vw, 52px);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.25;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 4px 30px rgba(0,0,0,0.5);
+  }
+
+  .hero-title-en {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(14px, 2vw, 22px);
+    font-weight: 400;
+    font-style: italic;
+    color: rgba(212, 175, 106, 0.85);
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+  }
+
+  .hero-subtitle {
+    font-size: 15px;
+    color: rgba(245, 240, 232, 0.6);
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    font-weight: 300;
+  }
+
+  .hero-date-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(192, 22, 44, 0.2);
+    border: 1px solid rgba(192, 22, 44, 0.4);
+    border-radius: 50px;
+    padding: 12px 28px;
+    margin-bottom: 48px;
+  }
+
+  .hero-date-badge span {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: rgba(245,240,232,0.9);
+    text-transform: uppercase;
+  }
+
+  .hero-date-badge .dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--crimson-light);
+  }
+
+  .hero-cta-group {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 16px 36px;
+    background: linear-gradient(135deg, var(--crimson), var(--crimson-dark));
+    color: var(--white);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 8px 30px rgba(192,22,44,0.4);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 40px rgba(192,22,44,0.55);
+    background: linear-gradient(135deg, var(--crimson-light), var(--crimson));
+  }
+
+  .btn-outline {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 16px 36px;
+    background: transparent;
+    color: rgba(245,240,232,0.8);
+    border-radius: 4px;
+    border: 1px solid rgba(245,240,232,0.25);
+    transition: all 0.3s;
+  }
+
+  .btn-outline:hover {
+    background: rgba(245,240,232,0.08);
+    border-color: rgba(245,240,232,0.5);
+    color: var(--white);
+  }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    animation: bounce 2.5s ease-in-out infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(8px); }
+  }
+
+  .hero-scroll span {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: rgba(212,175,106,0.5);
+    text-transform: uppercase;
+  }
+
+  .hero-scroll-line {
+    width: 1px; height: 40px;
+    background: linear-gradient(to bottom, rgba(212,175,106,0.5), transparent);
+  }
+
+  /* ── SECTION BASE ── */
+  section { padding: 100px 60px; }
+
+  .section-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--crimson);
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 700;
+    color: var(--midnight);
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .section-divider {
+    width: 60px; height: 3px;
+    background: linear-gradient(90deg, var(--crimson), transparent);
+    margin-bottom: 32px;
+    border-radius: 2px;
+  }
+
+  /* ── ABOUT ── */
+  #about {
+    background: var(--white);
+    padding: 100px 60px;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .about-text p {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #4A4A5A;
+    margin-bottom: 20px;
+    font-weight: 300;
+  }
+
+  .about-visual {
+    position: relative;
+  }
+
+  .about-card {
+    background: linear-gradient(160deg, var(--midnight) 0%, var(--midnight-mid) 100%);
+    border-radius: 16px;
+    padding: 48px;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-card::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(192,22,44,0.25) 0%, transparent 70%);
+  }
+
+  .stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .stat-item {}
+
+  .stat-number {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .stat-label {
+    font-size: 12px;
+    color: rgba(245,240,232,0.6);
+    letter-spacing: 1px;
+    font-weight: 300;
+  }
+
+  .about-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── PROGRAM ── */
+  #program {
+    background: var(--cream);
+    padding: 100px 60px;
+  }
+
+  .program-header {
+    max-width: 1200px;
+    margin: 0 auto 60px;
+  }
+
+  .program-table-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: auto;
+  }
+
+  .program-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+
+  .program-table thead tr {
+    background: var(--midnight);
+    color: var(--white);
+  }
+
+  .program-table thead th {
+    padding: 16px 24px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  .program-table thead th:first-child { border-radius: 10px 0 0 0; }
+  .program-table thead th:last-child { border-radius: 0 10px 0 0; }
+
+  .program-table tbody tr {
+    border-bottom: 1px solid rgba(13,27,62,0.08);
+    transition: background 0.2s;
+  }
+
+  .program-table tbody tr:hover { background: rgba(13,27,62,0.04); }
+
+  .program-table tbody td {
+    padding: 18px 24px;
+    vertical-align: top;
+    color: #3A3A50;
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  .program-table td.time {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--crimson);
+    white-space: nowrap;
+    letter-spacing: 1px;
+  }
+
+  .program-table td.session-title {
+    font-weight: 600;
+    color: var(--midnight);
+    font-size: 14px;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .badge-opening { background: rgba(192,22,44,0.1); color: var(--crimson); }
+  .badge-session { background: rgba(13,27,62,0.1); color: var(--midnight); }
+  .badge-break { background: rgba(212,175,106,0.2); color: #8B6A2E; }
+  .badge-closing { background: rgba(30,48,112,0.1); color: var(--midnight-light); }
+
+  /* ── AGENDA ── */
+  #agenda {
+    background: var(--midnight);
+    padding: 100px 60px;
+  }
+
+  #agenda .section-title { color: var(--white); }
+  #agenda .section-label { color: var(--gold); }
+  #agenda .section-divider { background: linear-gradient(90deg, var(--gold), transparent); }
+
+  .agenda-header {
+    max-width: 1200px;
+    margin: 0 auto 64px;
+  }
+
+  .timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 32px;
+    top: 0; bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--crimson), rgba(192,22,44,0.1));
+  }
+
+  .timeline-item {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 48px;
+    position: relative;
+    animation: slide-in 0.6s ease forwards;
+    opacity: 0;
+  }
+
+  .timeline-item:nth-child(1) { animation-delay: 0.1s; }
+  .timeline-item:nth-child(2) { animation-delay: 0.2s; }
+  .timeline-item:nth-child(3) { animation-delay: 0.3s; }
+  .timeline-item:nth-child(4) { animation-delay: 0.4s; }
+  .timeline-item:nth-child(5) { animation-delay: 0.5s; }
+  .timeline-item:nth-child(6) { animation-delay: 0.6s; }
+
+  @keyframes slide-in {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  .timeline-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(192,22,44,0.15);
+    border: 1px solid rgba(192,22,44,0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 22px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .timeline-content {
+    padding-top: 10px;
+    flex: 1;
+  }
+
+  .timeline-time {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .timeline-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+
+  .timeline-desc {
+    font-size: 14px;
+    color: rgba(245,240,232,0.55);
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  /* ── SPEAKERS ── */
+  #speakers {
+    background: var(--white);
+    padding: 100px 60px;
+  }
+
+  .speakers-header {
+    max-width: 1200px;
+    margin: 0 auto 64px;
+  }
+
+  .speakers-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .speaker-card {
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--cream);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(13,27,62,0.06);
+  }
+
+  .speaker-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 60px rgba(13,27,62,0.12);
+  }
+
+  .speaker-avatar {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: linear-gradient(160deg, var(--midnight) 0%, var(--midnight-mid) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .speaker-avatar::before {
+    content: '';
+    position: absolute;
+    bottom: -30px; left: -30px;
+    width: 150px; height: 150px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(192,22,44,0.2) 0%, transparent 70%);
+  }
+
+  .speaker-initials {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 700;
+    color: rgba(212,175,106,0.6);
+    position: relative;
+    z-index: 1;
+    letter-spacing: 2px;
+  }
+
+  .speaker-flag {
+    position: absolute;
+    top: 16px; right: 16px;
+    font-size: 24px;
+  }
+
+  .speaker-info {
+    padding: 28px 28px 32px;
+  }
+
+  .speaker-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--midnight);
+    margin-bottom: 6px;
+  }
+
+  .speaker-role {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--crimson);
+    margin-bottom: 16px;
+  }
+
+  .speaker-bio {
+    font-size: 13px;
+    color: #6B7280;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  /* ── REGISTER ── */
+  #register {
+    background: linear-gradient(160deg, var(--midnight) 0%, #1A0D3E 100%);
+    padding: 120px 60px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  #register::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(192,22,44,0.2) 0%, transparent 70%);
+  }
+
+  #register::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -80px;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(212,175,106,0.12) 0%, transparent 70%);
+  }
+
+  .register-content {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  #register .section-label { color: var(--gold); }
+  #register .section-title { color: var(--white); }
+  #register .section-divider {
+    background: linear-gradient(90deg, var(--gold), transparent);
+    margin: 0 auto 32px;
+  }
+
+  .register-desc {
+    font-size: 16px;
+    color: rgba(245,240,232,0.65);
+    line-height: 1.8;
+    margin-bottom: 48px;
+    font-weight: 300;
+  }
+
+  .register-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 20px 52px;
+    background: linear-gradient(135deg, var(--crimson), var(--crimson-dark));
+    color: var(--white);
+    border-radius: 6px;
+    transition: all 0.3s;
+    box-shadow: 0 12px 40px rgba(192,22,44,0.45);
+  }
+
+  .register-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 55px rgba(192,22,44,0.6);
+  }
+
+  .register-btn svg {
+    width: 18px; height: 18px;
+    transition: transform 0.3s;
+  }
+
+  .register-btn:hover svg { transform: translateX(4px); }
+
+  .register-note {
+    margin-top: 24px;
+    font-size: 12px;
+    color: rgba(245,240,232,0.35);
+    letter-spacing: 1px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #080E20;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+    border-top: 1px solid rgba(212,175,106,0.12);
+  }
+
+  .footer-logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: rgba(212,175,106,0.5);
+    text-transform: uppercase;
+  }
+
+  .footer-copy {
+    font-size: 12px;
+    color: rgba(245,240,232,0.25);
+    letter-spacing: 1px;
+    font-weight: 300;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 16px 24px; }
+    .nav-links { display: none; }
+    section { padding: 80px 24px; }
+    .about-grid { grid-template-columns: 1fr; gap: 48px; }
+    .speakers-grid { grid-template-columns: 1fr; }
+    #register { padding: 80px 24px; }
+    footer { padding: 40px 24px; flex-direction: column; text-align: center; }
+  }
+
+  @media (max-width: 600px) {
+    .hero-content { padding: 100px 24px 60px; }
+    .stat-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+    .stat-number { font-size: 36px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">2026 국제보훈컨퍼런스</div>
+  <ul class="nav-links">
+    <li><a href="#about">소개</a></li>
+    <li><a href="#program">프로그램</a></li>
+    <li><a href="#agenda">아젠다</a></li>
+    <li><a href="#speakers">연사</a></li>
+  </ul>
+  <a href="https://forms.gle/NCG4xNmf6koid1Wu7" target="_blank" class="nav-cta">사전등록</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-orb"></div>
+
+  <div class="hero-content">
+    <div class="hero-label">국가보훈부 주최 · 국제보훈컨퍼런스</div>
+    <div class="hero-year" aria-hidden="true">2026</div>
+    <h1 class="hero-title-kr">기억의 동맹,<br>미래로의 다리</h1>
+    <p class="hero-title-en">"Alliance of Memory, Bridge to Future"</p>
+    <p class="hero-subtitle">2026 국제보훈컨퍼런스</p>
+    <div class="hero-date-badge">
+      <span>2026년 6월</span>
+      <div class="dot"></div>
+      <span>서울, 대한민국</span>
+      <div class="dot"></div>
+      <span>국제회의</span>
+    </div>
+    <div class="hero-cta-group">
+      <a href="https://forms.gle/NCG4xNmf6koid1Wu7" target="_blank" class="btn-primary">사전등록 신청</a>
+      <a href="#program" class="btn-outline">프로그램 보기</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-text">
+      <p class="section-label">컨퍼런스 소개</p>
+      <h2 class="section-title">보훈의 역사를<br>미래 세대와 잇다</h2>
+      <div class="section-divider"></div>
+      <p>2026 국제보훈컨퍼런스는 세계 각국의 보훈 관계자, 정책 전문가, 역사학자, 참전용사 단체가 한자리에 모여 기억과 연대의 중요성을 나누는 국제적 플랫폼입니다.</p>
+      <p>한국전쟁 정전 이후 세계 평화와 안보를 위한 희생을 기억하고, 다음 세대에게 그 정신을 전승하기 위한 심층 논의와 정책 공유의 장을 마련합니다.</p>
+      <p>전 세계 참전국 대표단, 외교관, 학자들과 함께 보훈의 현재와 미래를 논의하고, 국가 간 연대와 협력의 새로운 지평을 엽니다.</p>
+    </div>
+
+    <div class="about-visual">
+      <div class="about-card">
+        <div class="about-card-title">컨퍼런스 주요 수치</div>
+        <div class="stat-grid">
+          <div class="stat-item">
+            <div class="stat-number">20+</div>
+            <div class="stat-label">참가국</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">참가자</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">15+</div>
+            <div class="stat-label">국내외 연사</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">3일</div>
+            <div class="stat-label">컨퍼런스 기간</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM -->
+<section id="program">
+  <div class="program-header">
+    <p class="section-label">공식 프로그램</p>
+    <h2 class="section-title">프로그램 일정</h2>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="program-table-wrap">
+    <table class="program-table">
+      <thead>
+        <tr>
+          <th>시간</th>
+          <th>세션명</th>
+          <th>주제</th>
+          <th>구분</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="time">09:00 – 10:00</td>
+          <td class="session-title">개회식 및 환영사</td>
+          <td>주최기관 대표, 귀빈 축사 및 개회 선언</td>
+          <td><span class="badge badge-opening">개회</span></td>
+        </tr>
+        <tr>
+          <td class="time">10:00 – 11:30</td>
+          <td class="session-title">기조강연 I</td>
+          <td>기억의 동맹 — 국제사회의 보훈 연대와 글로벌 거버넌스</td>
+          <td><span class="badge badge-session">세션</span></td>
+        </tr>
+        <tr>
+          <td class="time">11:30 – 13:00</td>
+          <td class="session-title">기조강연 II</td>
+          <td>미래로의 다리 — 차세대 보훈 정책과 디지털 기억</td>
+          <td><span class="badge badge-session">세션</span></td>
+        </tr>
+        <tr>
+          <td class="time">13:00 – 14:00</td>
+          <td class="session-title">오찬 휴식</td>
+          <td>네트워킹 및 전시 관람</td>
+          <td><span class="badge badge-break">휴식</span></td>
+        </tr>
+        <tr>
+          <td class="time">14:00 – 15:30</td>
+          <td class="session-title">패널 토론 I</td>
+          <td>참전국의 보훈 제도 비교 분석 및 우수 사례 공유</td>
+          <td><span class="badge badge-session">세션</span></td>
+        </tr>
+        <tr>
+          <td class="time">15:30 – 17:00</td>
+          <td class="session-title">패널 토론 II</td>
+          <td>보훈과 평화: 분쟁 이후 사회 통합의 길</td>
+          <td><span class="badge badge-session">세션</span></td>
+        </tr>
+        <tr>
+          <td class="time">17:00 – 17:30</td>
+          <td class="session-title">폐회식 및 선언문 채택</td>
+          <td>공동선언문 발표 및 폐회 인사</td>
+          <td><span class="badge badge-closing">폐회</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- AGENDA TIMELINE -->
+<section id="agenda">
+  <div class="agenda-header">
+    <p class="section-label">아젠다 미리보기</p>
+    <h2 class="section-title">주요 논의 주제</h2>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-icon">🌐</div>
+      <div class="timeline-content">
+        <div class="timeline-time">Theme 01</div>
+        <div class="timeline-title">국제 보훈 거버넌스의 재정립</div>
+        <div class="timeline-desc">다자주의 시대 보훈 협력의 새로운 프레임워크 구축. 유엔 및 국제기구와의 협력 체계와 글로벌 보훈 네트워크 강화 방안을 논의합니다.</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-icon">📜</div>
+      <div class="timeline-content">
+        <div class="timeline-time">Theme 02</div>
+        <div class="timeline-title">역사적 기억과 집단 정체성</div>
+        <div class="timeline-desc">전쟁의 기억이 국가 정체성과 집단 기억에 미치는 영향. 참전 경험의 구술사 보존과 디지털 아카이빙 전략을 탐구합니다.</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-icon">🤝</div>
+      <div class="timeline-content">
+        <div class="timeline-time">Theme 03</div>
+        <div class="timeline-title">참전용사 복지와 사회 통합</div>
+        <div class="timeline-desc">참전용사 및 유가족 지원 제도의 국제적 우수 사례 공유. 신체적·정신적 재활, 사회 복귀 지원 정책 비교 분석을 진행합니다.</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-icon">🎓</div>
+      <div class="timeline-content">
+        <div class="timeline-time">Theme 04</div>
+        <div class="timeline-title">차세대 보훈 교육과 전승</div>
+        <div class="timeline-desc">미래 세대에게 희생의 가치와 보훈 정신을 전달하는 교육 혁신. 학교 교육과정, 체험형 콘텐츠, 청소년 프로그램 사례를 소개합니다.</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-icon">💻</div>
+      <div class="timeline-content">
+        <div class="timeline-time">Theme 05</div>
+        <div class="timeline-title">디지털 기술과 보훈의 미래</div>
+        <div class="timeline-desc">AI, VR, 메타버스 기술을 활용한 새로운 보훈 콘텐츠와 기억 보존 방식 탐색. 디지털 전환 시대 보훈 행정의 혁신 방향을 논의합니다.</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-icon">🕊️</div>
+      <div class="timeline-content">
+        <div class="timeline-time">Theme 06</div>
+        <div class="timeline-title">평화 구축과 국제 연대</div>
+        <div class="timeline-desc">보훈을 통한 국제 평화 증진과 분쟁 예방. 참전국 간 화해와 협력의 선례를 분석하고 지속 가능한 평화 구축 모델을 제시합니다.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPEAKERS -->
+<section id="speakers">
+  <div class="speakers-header">
+    <p class="section-label">주요 연사</p>
+    <h2 class="section-title">세계 각국의<br>보훈 전문가</h2>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="speakers-grid">
+    <!-- Speaker 1 -->
+    <div class="speaker-card">
+      <div class="speaker-avatar">
+        <div class="speaker-initials">KMH</div>
+        <div class="speaker-flag">🇰🇷</div>
+      </div>
+      <div class="speaker-info">
+        <div class="speaker-name">김민형</div>
+        <div class="speaker-role">국가보훈부 장관</div>
+        <p class="speaker-bio">국내외 보훈 정책 수립을 30년간 이끌어온 전문가로, 한국의 보훈 제도를 세계적 수준으로 발전시키는 데 기여해왔습니다. 국제보훈협력 증진에 관한 다수의 연구와 정책을 주도하였습니다.</p>
+      </div>
+    </div>
+
+    <!-- Speaker 2 -->
+    <div class="speaker-card">
+      <div class="speaker-avatar">
+        <div class="speaker-initials">JDW</div>
+        <div class="speaker-flag">🇺🇸</div>
+      </div>
+      <div class="speaker-info">
+        <div class="speaker-name">James D. Walker</div>
+        <div class="speaker-role">미국 재향군인부 차관보</div>
+        <p class="speaker-bio">미국 재향군인부에서 20년 이상 근무하며 참전용사 지원 정책과 국제 보훈 협력을 담당해온 전문가입니다. 한미 보훈 협력의 핵심 역할을 맡아왔습니다.</p>
+      </div>
+    </div>
+
+    <!-- Speaker 3 -->
+    <div class="speaker-card">
+      <div class="speaker-avatar">
+        <div class="speaker-initials">MLC</div>
+        <div class="speaker-flag">🇫🇷</div>
+      </div>
+      <div class="speaker-info">
+        <div class="speaker-name">Marie-Lucie Charpentier</div>
+        <div class="speaker-role">프랑스 국방부 역사기억국장</div>
+        <p class="speaker-bio">프랑스의 역사 기억 보존과 참전용사 정책 전문가로, 유럽 보훈 공동체 형성에 앞장서고 있습니다. 디지털 시대 역사 기억 아카이빙 분야의 권위자입니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REGISTER -->
+<section id="register">
+  <div class="register-content">
+    <p class="section-label">사전등록</p>
+    <h2 class="section-title">지금 바로<br>참가를 신청하세요</h2>
+    <div class="section-divider"></div>
+    <p class="register-desc">2026 국제보훈컨퍼런스 참가 사전등록을 통해 최신 소식, 세션 정보, 입장권 안내를 가장 먼저 받아보세요. 참가 인원은 제한되어 있으니 조기 등록을 권장합니다.</p>
+    <a href="https://forms.gle/NCG4xNmf6koid1Wu7" target="_blank" class="register-btn">
+      사전등록 신청하기
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+      </svg>
+    </a>
+    <p class="register-note">* 구글 폼을 통한 사전등록 · 등록 확인 메일 발송 예정</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">2026 International Veterans Conference · Seoul, Korea</div>
+  <div class="footer-copy">© 2026 국가보훈부. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
